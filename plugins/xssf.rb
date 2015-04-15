@@ -12,7 +12,7 @@ module Msf
 
 			clean_database;	Msf::Xssf::AUTO_ATTACKS.clear
 
-			@DefaultPort = Msf::Xssf::SERVER_PORT;		@DefaultUri  = Msf::Xssf::SERVER_URI;	@defaultPublic = false;	@defaultMode = 'Normal';
+			@DefaultPort = Msf::Xssf::SERVER_PORT;		@DefaultUri  = Msf::Xssf::SERVER_URI;	@defaultPublic = true;	@defaultMode = 'Normal';
 
 			# Check if parameters are correct if entered
 			opts['Port'].to_s 	=~ /^(6553[0-5]|655[0-2]\d|65[0-4]\d\d|6[0-4]\d{3}|[1-5]\d{4}|[1-9]\d{0,3}|0)$/ ? port = Integer(opts['Port']) : port = @DefaultPort
